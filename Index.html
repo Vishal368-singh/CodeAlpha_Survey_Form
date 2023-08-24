@@ -65,5 +65,29 @@
             </div>
         </div>
     </form>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({ 
+                Host : "smtp.gmail.com",
+                Username : "vissisingh7985@gmail.com",
+                Password : "E2059985BB002219C8AC199C277FAD75B2E3",
+                To : 'codecrazy0061@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New survey form",
+                Body : "Name:"+document.getElementById("name").value
+                +"<br>E-mail:"+document.getElementById("email").value
+                +"<br>Age:"+document.getElementById("age").value
+                +"<brWhich option best describes your current job?:"+document.getElementById("option1").value
+                +"<br>Would you recommend free virtual intern to a friend?:"+document.getElementById("head1").value
+                +"<br>What is your favourite features of internship?:"+document.getElementById("option2").value
+                +"<br>What would you like to improved?:"+document.getElementById("content2").value
+                +"<br>Feedback:"+document.getElementById("head3").value
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
 </body>
+    
 </html>
